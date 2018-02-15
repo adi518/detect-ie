@@ -94,11 +94,11 @@ export function detectIe(options = {}) {
   if (version) {
 
     const versions = [7, 8, 9, 10, 11]
-    const detectedVersion = version
 
     // Prepare Query Keys for IE 7-11
-    const queries = versions.reduce((o, version) => { o[`isIe${version}`] = version === detectedVersion; return o }, {})
+    const queries = versions.reduce((o, v) => { o[`isIe${v}`] = v === version; return o }, {})
 
+    // Special Queries
     const isEdge = version === '>= 12' || version >= 12
     const isIe7orLower = version === '<= 7' || version === 7
     const isBelowEdge = version < 12
