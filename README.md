@@ -1,5 +1,5 @@
 # Detect-Ie
-Detect Internet Explorer versions 7-11, Edge (>= 12).
+Detect Internet Explorer 7-11, Edge (>= 12).
 ## Install
 ```
 npm install --save detect-ie
