@@ -10,6 +10,7 @@ import { detectIe } from 'detect-msie'
 
 const detection = detectIe()
 
+// Available Queries:
 console.log(detection.isDetected)
 console.log(detection.isEdge)
 console.log(detection.isBelowEdge)
