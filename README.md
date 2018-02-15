@@ -2,7 +2,7 @@
 Detect Internet Explorer 7-11, Edge (>= 12).
 ## Install
 ```
-npm install --save detect-ie
+npm install --save detect-msie
 ```
 ## Usage
 ```js
