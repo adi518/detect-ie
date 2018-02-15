@@ -6,7 +6,7 @@ npm install --save detect-ie
 ```
 ## Usage
 ```js
-import { detectIe } from 'detect-ie'
+import { detectIe } from 'detect-msie'
 
 const detection = detectIe()
 
