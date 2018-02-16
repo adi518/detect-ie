@@ -1,6 +1,7 @@
 /* eslint-disable space-before-function-paren */
 
 // As always with these things, YMMV. ;)
+// https://codepen.io/gapcode/pen/vEJNZN
 // https://github.com/stowball/Layout-Engine
 // https://stackoverflow.com/a/14658198/4106263
 // https://en.wikipedia.org/wiki/Internet_Explorer_version_history
