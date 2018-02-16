@@ -6,6 +6,9 @@
 // https://en.wikipedia.org/wiki/Internet_Explorer_version_history
 // https://stackoverflow.com/questions/9900311/how-do-i-target-only-internet-explorer-10-for-certain-situations-like-internet-e/14916454#14916454
 
+// Constants
+const IE7_OR_LOWER = '<= 7'
+
 // Implementation
 export function detectIe(options = {}) {
 
@@ -86,7 +89,7 @@ export function detectIe(options = {}) {
 
       // Detect IE <= 7
       else {
-        version = '<= 7'
+        version = IE7_OR_LOWER
       }
     }
   }
@@ -95,12 +98,12 @@ export function detectIe(options = {}) {
 
     const versions = [7, 8, 9, 10, 11]
 
-    // Prepare Query Keys for IE 7-11
+    // Generate Queries for IE 7-11
     const queries = versions.reduce((o, v) => { o[`isIe${v}`] = v === version; return o }, {})
 
     // Special Queries
     const isEdge = version === '>= 12' || version >= 12
-    const isIe7orLower = version === '<= 7' || version === 7
+    const isIe7orLower = version === IE7_OR_LOWER || version === 7
     const isBelowEdge = version < 12
 
     return {
