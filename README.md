@@ -1,5 +1,5 @@
 # Detect-Ie
-Detection of Internet Explorer 7-11 and Edge (>= 12), based on either Feature or User-Agent.
+Detection of Internet Explorer 7-11 and Edge (>= 12), based on either Feature or User-Agent. See [demo](https://adi518.github.io/detect-ie/).
 ## Install
 ```
 npm install --save detect-msie
@@ -27,4 +27,4 @@ console.log(report.version)
 #### `useUserAgent`
 * Type: `Boolean`
 * Default: `false`
-* Description: Use User-Agent based detection instead (less reliable, spoofable).
+* Description: Use User-Agent based detection instead (less reliable, [spoofable](https://developer.mozilla.org/en-US/docs/Glossary/User_agent)).
