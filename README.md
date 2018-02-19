@@ -1,29 +1,29 @@
 # Detect-Ie
-Detect Internet Explorer 7-11, Edge (>= 12).
+Detection of Internet Explorer 7-11 and Edge (>= 12), based on either Feature or User-Agent.
 ## Install
 ```
 npm install --save detect-msie
 ```
 ## Usage
+Default detection is based on Feature, as it is a more reliable method. To use a User-Agent based detection instead, see options below.
 ```js
 import { detectIe } from 'detect-msie'
 
-const detection = detectIe()
+const report = detectIe()
 
 // Available Queries:
-console.log(detection.isDetected)
-console.log(detection.isEdge)
-console.log(detection.isBelowEdge)
-console.log(detection.isIe7OrLower)
-console.log(detection.isIe7)
-console.log(detection.isIe8)
-console.log(detection.isIe9)
-console.log(detection.isIe10)
-console.log(detection.isIe11)
-console.log(detection.version)
+console.log(report.isDetected)
+console.log(report.isEdge)
+console.log(report.isBelowEdge)
+console.log(report.isIe7OrLower)
+console.log(report.isIe7)
+console.log(report.isIe8)
+console.log(report.isIe9)
+console.log(report.isIe10)
+console.log(report.isIe11)
+console.log(report.version)
 ```
 ## Options
-
 #### `useUserAgent`
 * Type: `Boolean`
 * Default: `false`

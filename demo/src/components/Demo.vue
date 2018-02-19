@@ -1,24 +1,25 @@
 <template>
   <div class="demo">
-    <h1>Internet Explorer Detection (Feature)</h1>
-    <table style="width: 15%; text-align: left">
+    <h1>Detect IE/Edge version with JavaScript</h1>
+    <h2>(Feature)</h2>
+    <table style="width: 15%">
       <tr v-for="(value, key, index) in byFeature" :key="index">
         <td>
           {{snakecase(key).toUpperCase()}}
         </td>
-        <td>
-          <b>{{value}}</b>
+        <td style="text-align: right">
+          <b :style="{'color': value ? null : '#ccc'}">{{value}}</b>
         </td>
       </tr>
     </table>
-    <h1>Internet Explorer Detection (User-Agent)</h1>
-    <table style="width: 15%; text-align: left">
+    <h2>(User-Agent)</h2>
+    <table style="width: 15%">
       <tr v-for="(value, key, index) in byUserAgent" :key="index">
         <td>
           {{snakecase(key).toUpperCase()}}
         </td>
-        <td>
-          <b>{{value}}</b>
+        <td style="text-align: right">
+          <b :style="{'color': value ? null : '#ccc'}">{{value}}</b>
         </td>
       </tr>
     </table>
@@ -37,7 +38,19 @@ export default {
   data() {
     return {
       byFeature: detectIe(),
-      byUserAgent: detectIe({ useUserAgent: true })
+      byUserAgent: detectIe({ useUserAgent: true }),
+      queries: [
+        'isDetected',
+        'isEdge',
+        'isBelowEdge',
+        'isIe7OrLower',
+        'isIe7',
+        'isIe8',
+        'isIe9',
+        'isIe10',
+        'isIe11',
+        'version'
+      ]
     }
   },
   methods: {
@@ -57,7 +70,7 @@ export default {
 }
 
 table {
-  border: 1px solid #818181;
   padding: 1em;
+  border: 1px solid #818181;
 }
 </style>
