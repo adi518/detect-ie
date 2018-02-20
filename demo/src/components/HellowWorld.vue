@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h1>Detect IE/Edge version with JavaScript</h1>
+    <h1>Detect IE/Edge</h1>
     <h2>(Feature)</h2>
     <table style="width: 15%">
       <tr v-for="(value, key, index) in byFeature" :key="index">
